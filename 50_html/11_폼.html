@@ -10,7 +10,25 @@
 
 <body>
     <h1>폼</h1>
-    <p>폼(양식)? 검색 창, 로그인 창, 회원가입, 게시판</p>
+    <p>폼(양식)? 검색 창, 로그인 창, 회원가입 페이지, 게시판 페이지</p>
+
+    <!-- 
+        <form>: 폼의 요소를 담기위한 컨테이너
+        <fieldset>: 폼의 그룹핑
+        <legend>: fieldset의 캡션
+        <input type="">: 한 줄 입력 폼
+            type: text, password, search, tel, email, url
+            type: submit, reset, button, image, file
+        <label>: 레이블
+        <button type="">: 버튼
+            type: submit, reset, button
+        <textarea>: 여러 줄 입력
+        <select>: 선택 목록
+        <option>: 목록의 항목
+        <optgroup>: 목록의 항목을 그룹핑
+        <datalist>: 선택 목록 + 입력
+     -->
+
     <!-- 서버 프로그래밍언어: php, jsp, asp -->
     <!-- 자동 완성 기능:  autocomplete="on" -->
     <form action="action_page.php" method="get">
@@ -19,8 +37,12 @@
             <legend>검색 창</legend>
             <!-- 검색 입력 상자 -->
             구글 검색:
+            <input type="search">
             
             <!-- 검색 버튼 -->
+            <!-- value는 버튼의 이름이고 input은 종료태그가 없음 -->
+            <input type="submit" value="검색">
+            <button type="submit">검색</button>
 
         </fieldset>
 
@@ -29,10 +51,13 @@
 
             <!-- 아이디 -->
             아이디:
+            <input type="text">
             <!-- 패스워드 -->
             패스워드:
+            <input type="password">
 
             <!-- 로그인 버튼 -->
+            <input type="submit" value="로그인">
 
         </fieldset>
 
