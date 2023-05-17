@@ -12,10 +12,46 @@
     <h1>연산자</h1>
     <script>
         /* 
-            논리 연산자: ||(또는), &&(그리고), !(아니다)
+            1 + 2에서 피연산자와 연산자의 구분은
+            피연산자: 1,2 
+            단항 연산자: ++, --. !, -(음수 기호만)
+            이항 연산자: +, -, *, /, %, **, >, >=, <=, ||, && ....
+            삼항 연산자: ? : 
+            
+            a++, ++a
+        
+            논리 연산자: //shift+ ||(또는), &&(그리고), !(아니다)
+            논리 연산의 대상(피연산자)과 결과는  true 또는 false 이다.
+
+            자동차 또는 집 사줄게 > 자동차만 사줌
+            true || true -> true
+            true || false -> true
+            false || true -> true
+            false || false -> false
+
+            true || false || true || false || false -> true (1개만 true라도 true)
+
+            자동차하고 집 사줄게 > 자동차만 사줌
+            true && true -> true
+            true && false -> false
+            false && true -> false
+            false && false -> false
+
+            true && false && false && false -> false (1개라도 false면 false)
+                
+            !는 반대 무조건 연산자 앞에 써야함
+            !true -> false
+            !false -> true
+
+            연산자의 우선순위
+            1. ()
+            2. 산술
+            3. 비교
+            4. 논리: &&, ||
+            5. 대입(할당)
             
             연산자의 우선순위
-            18. ()
+            18. ()  ex) (2+3)*4
             15. 산술(증감): ++, --
             14. 논리: !
             14. typeof
@@ -35,10 +71,17 @@
 
         var a = 10;
         var b = 20;
-        var m = 30;
-        var n = 40;
         var result;
 
+        result = a < b || a > b;
+        document.write(result, '<br>');
+
+        result = a < b && a < b && a > b;
+        document.write(result, '<br>');
+
+
+        // !는 무조건 반대 
+        result =! (a > b);
         document.write(result, '<br>');
         
     </script>
