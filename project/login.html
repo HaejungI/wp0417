@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>백세시대 재가복지센터</title>
+    <style>
+        .h1 {
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            color: darkblue;
+            margin: 50px 10px 20px;
+            font-size: 32px;
+        }
+
+        body {font-size: 12px;}
+
+        div {
+            background: white;
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            border: 10px solid darkblue;
+        }
+
+        .label1 {
+            display: inline-block;
+            width: 80px;
+            height: 10px;
+            margin: 1px;
+            padding: 7px;
+            border: 1px solid darkblue;
+        }
+        .label2 {
+            display: inline-block;
+            width: 100px;
+            height: 10px;
+            margin: 1px;
+            padding: 7px;
+            border: 1px solid darkblue;
+        }
+        .select1 {
+            display: inline-block;
+            height: 30px;
+            margin: 1px;
+            padding: 7px;
+            border: 1px solid black;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <h1 class="h1">백세시대 재가복지센터</h1>
+    <div>
+    <hr>
+    <label for="user_id">종사자 고유번호</label>
+    <input type="text" name="user_id" id="user_id" required class="label1">
+
+    <select class="select1">
+        <option>요양보호사</option>
+        <option>사회복지사</option>
+        <option>관리자</option>
+    </select><br>
+
+    <label for="user_pw">비밀번호</label>
+    <input type="password" name="user_pw" id="user_pw" class="label2" required>
+
+    <a href="http://127.0.0.1:5500/project/main%20page.html"><input type="submit" value="로그인" id="myfile" name="myfile"></a>
+    
+
+    
+    <hr>
+    </div>
+
+   
+</body>
+</html>
