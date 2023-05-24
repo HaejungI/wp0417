@@ -43,7 +43,7 @@
             객체의 종류
             1. 내장 객체(Built-in Object)
                 - 자바스크립트 엔진에 내장되어 있는 객체
-                - Date, Array, Math, String 등
+                - Object, Date, Array, Math, String 등
             2. 브라우저 객체 모델(BOM, Browser Object Model)
                 - 브라우저에 계층 구조로 내장되어 있는 객체
                 - window, document, screen, location, history, navigator 등
@@ -51,10 +51,50 @@
                 - HTML 문서 구조 (document,html,head,body(p,h,...))
         */
 
-        // 내장 객체 생성
-        // 객체 생성 시 new 키워드와 생성함수를 사용한다.
-        // 참조변수(인스턴스명) = new 생성함수()
+        /*  내장 객체 생성
+            
+            //객체 생성1
+            let 객체 = new 생성함수();
+            객체.속성 = 값;
+            객체.속성 = function(){};
+             
+            //객체 생성2
+            let 객체 = {
+                속성: 값,
+                속성: function(){}
+            };
+        
+             -객체 생성 시 new 키워드와 생성함수를 사용한다.
+             -변수를 객체(참조)변수라 하며, 인스턴스(instance)라 부른다.
+             -객체내에 함수를 값으로 하는 속성을 메서드라 한다.
 
+            객체.메서드() = function(){};
+            객체.속성 = 값;
+         */
+   
+
+        // 객체 정의: tv
+        // this는 객체 자기자신
+        let tv = new Object();
+        tv.color = 'white';
+        tv.price = 30000; 
+        tv.info = function(){
+            document.write('tv 색상: ' +this.color, '<br>');
+            document.write('tv 가격: ' +this.price, '<br>');
+        };
+
+        tv.info();
+
+        let tv2= {
+        color: 'blue',
+        price: 30000,
+        info: function(){
+            document.write('tv2 색상: ' +this.color, '<br>');
+            document.write('tv2 가격: ' +this.price, '<br>');
+           }
+        };
+
+        tv2.info();
 
 
     </script>

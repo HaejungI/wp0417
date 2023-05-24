@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.wrap {width: 1000px;}
+
+header {height: 100px; background:#ccc;}
+
+section {height: 500px;}
+
+footer {height: 100px; background: #555;}
