@@ -22,10 +22,12 @@
         const img = document.querySelector('img');
         
         btn.addEventListener('click', function(){
+            // 0 <= Math.random() * 6 + 1 < 7
+            // 1 ~ 6 사이의 정수
             let num = Math.floor(Math.random() * 6 + 1);
             // HTML 요소 속성을 변경
             // setAttribute('HTML속성명', '값')
-            img.setAttribute('src', '../assets/pic_' + num + '.jpg');
+            img.setAttribute('src', '../../assets/pic_' + num + '.jpg');
         });
     </script>
 </body>
