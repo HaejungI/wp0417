@@ -25,6 +25,14 @@
         /* 
             $('선택자').stop().animate() ~ 모션의 중첩 끊기
         */
+        
+        $('div').on('mouseenter', function () {
+            $('div').stop().animate({ width: '500px', height: '500px' }, 800, 'easeOutBounce');
+        });
+        $('div').on('mouseleave', function () {
+            $('div').stop().animate({ width: '300px', height: '300px' }, 800, 'easeOutBounce');
+        });
+
 
     </script>
 </body>

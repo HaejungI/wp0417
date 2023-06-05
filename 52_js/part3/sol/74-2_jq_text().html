@@ -36,14 +36,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-            $('선택자').text(); ~ 문자열 반환
-            $('선택자').text('문자열'); ~ 문자열 설정
+            $('선택자').text(); ~ 문자열 가져오기
+            $('선택자').text('문자열'); ~ 문자열 지정하기
+
+            css({속성: 값, 속성: 값, ...}) 
+            css({속성: 값}) 
+
+            $(this) ~ 이벤트가 발생한 객체
         */
 
+        /* 
+            색상 이름의 목록 중 하나를 클릭하면
+            박스의 색의 컬러가 변경되고, -> css()
+            색상 이름이 박스에 표시되도록 하시오. -> text(), html()
+        */
 
+        // li를 클릭하면 함수를 실행
         $('li').on('click', function () {
+            // this란? ~ 클릭한 li
+            // 클릭한 li의 내용을 (문자열)을 가져와서 txt변수에 할당
             var txt = $(this).text();
+            // div의 내용을 txt로 지정한다.
             $('div').text(txt);
+            // div의 배경색을 txt로 한다.
             $('div').css({ background: txt });
         });
 
