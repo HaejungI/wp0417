@@ -8,7 +8,7 @@
     <title>HTML+CSS+JS</title>
     <style>
         .box {
-            width: 800px;
+            width: 400px;
         }
         .box video {
             width: 100%;
@@ -25,7 +25,7 @@
 <body>
     <div class="box">
         <video>
-            <source src="../assets/mov_bbb.mp4" type="video/mp4">
+            <source src="../assets/video/mov_bbb.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -44,6 +44,37 @@
             $('video').get(n).pause() ~ 비디오 불러오기
         */
 
+        /* 
+           load 버튼을 클릭하면
+           비디오를 처음으로 지정한다.
+           play 버튼을 클릭하면
+           비디오를 실행시킨다.
+           pause 버튼을 클릭하면
+           비디오를 일시정지시킨다.
+
+           이벤트: click
+           메서드: load(), play(), pause(), get()
+           */
+          //이벤트 메서드의 메개변수는 함수
+        // load 버튼을 클릭하면 함수실행
+       
+         const vid = $('video').get(0);
+
+        $('.load').click(function(){
+            //video를 처음 상태로
+            vid.load();
+        })
+        // play 버튼을 클릭하면 함수실행
+        $('.play').click(function(){
+            //비디오 실행
+            vid.play();
+        })
+        // pause 버튼을 클릭하면 함수실행
+        $('.pause').click(function(){
+            //비디오 정지
+            vid.pause();
+       })
+       
 
     </script>
 </body>
